@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 10px;
+    --tt-heading-color: #0C3440;
+    --tt-label-color: #00453A;
+    --tt-input-color: #212529;
+    --input-outline: #02799D;
+    --input-border: rgba(73, 80, 87, 0.3);
+    --tt-placeholder-color: rgba(73, 80, 87, 0.5);
+    --input-bg: #DCE2E9;
+    --bg-btn: #02799D;
+    --tt-btn-color: #f9f6f6;
+    --bg-error: #F03E3E;
+    --tt-error: #f9f6f6;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background: #040924;
+    font-size: 1.6rem;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+.card {
+    padding: 4.8rem 6.4rem 6.4rem;
+    background: white;
+    max-width: 42.8rem;
+    margin-inline: auto;
+    border-radius: .6rem;
+    box-shadow: 0 .2rem .4rem rgba(0, 0, 0, 0.1);
+}
