@@ -148,3 +148,25 @@ form button:hover {
 .modal-card button:hover {
     transform: scale(1.1);
 }
+
+/* alert error */
+
+.alert-error.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.alert-error {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: var(--tt-error);
+    background: var(--bg-error);
+    font-size: 1.6rem;
+    line-height: 2rem;
+    text-align: center;
+    padding: .8rem 0;
+    opacity: 0;
+    visibility: hidden;
+}
