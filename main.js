@@ -1,9 +1,18 @@
 const form = document.querySelector("form");
 const inputWeight = document.querySelector("#weight");
 const inputHeight = document.querySelector("#height");
-const modalWrapper = document.querySelector(".modal-wrapper");
-const modalMessage = document.querySelector(".modal-card .title span");
-const modalBtnClose = document.querySelector(".modal-card button.close");
+
+const Modal = {
+    wrapper: document.querySelector(".modal-wrapper"),
+    message: document.querySelector(".modal-card .title span"),
+    btnClose: document.querySelector(".modal-card button.close"),
+    open() {
+        Modal.wrapper.classList.add("open");
+    },
+    close() {
+        Modal.wrapper.classList.remove("open");
+    },
+};
 
 form.onsubmit = function(event) {
     event.preventDefault();
@@ -11,12 +20,12 @@ form.onsubmit = function(event) {
     const height = inputHeight.value;
     const bmiResult = bmiCalculator(weight, height);
     const message = `Your BMI is ${bmiResult}`;
-    modalWrapper.classList.add("open");
-    modalMessage.innerText = message;
+    Modal.open();
+    Modal.message.innerText = message;
 };
 
-modalBtnClose.onclick = function() {
-    modalWrapper.classList.remove("open");
+Modal.btnClose.onclick = function() {
+    Modal.close();
 };
 
 function bmiCalculator(weight, height) {
