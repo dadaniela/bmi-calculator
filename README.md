@@ -5,4 +5,4 @@ It’s one of the courses offered by [rocketseat.com.br](https://rocketseat.com.
 
 This is a simple Body Mass Index calculator that allows the user to enter her weight in kilograms and her height in centimeters and outputs the BMI.
 
-You can access the final result [here](dadaniela.github.io/bmi-calculator)
+You can access the final result [here](https://dadaniela.github.io/bmi-calculator)
