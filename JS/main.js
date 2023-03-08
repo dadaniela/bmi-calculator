@@ -10,9 +10,9 @@ form.onsubmit = function(event) {
     event.preventDefault();
     const weight = inputWeight.value;
     const height = inputHeight.value;
-    const showAlertError = notNumber(weight) || notNumber(height);
+    const weightOrHeightIsNotANumber = notNumber(weight) || notNumber(height);
     
-    if(showAlertError) {
+    if(weightOrHeightIsNotANumber) {
         AlertError.open()
         return;
     }
@@ -20,6 +20,10 @@ form.onsubmit = function(event) {
     AlertError.close();
 
     const bmiResult = bmiCalculator(weight, height);
+    displayResultBMI(bmiResult);
+};
+
+function displayResultBMI(bmiResult) {
     const message = `Your BMI is ${bmiResult}`;
     Modal.open();
     Modal.message.innerText = message;
